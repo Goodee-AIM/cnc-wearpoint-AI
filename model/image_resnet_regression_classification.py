@@ -24,7 +24,7 @@ from sklearn.metrics import (
 # -------------------------
 # Task
 # -------------------------
-TASK = "classification"  # "regression" 또는 "classification"
+TASK = "regression"  # "regression" 또는 "classification"
 
 # -------------------------
 # Paths
@@ -34,8 +34,16 @@ DATA_DIR = ROOT_DIR / "image_inte_3"
 
 # Task별 결과 저장 폴더
 OUTPUT_DIRS = {
-    "regression": ROOT_DIR / "regression_model",
-    "classification": ROOT_DIR / "classification_model",
+    "classification": (
+        ROOT_DIR
+        / "classification_model"
+        / "image_classification_model"
+    ),
+    "regression": (
+        ROOT_DIR
+        / "regression_model"
+        / "image_regression_model"
+    ),
 }
 
 # -------------------------
